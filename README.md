@@ -66,3 +66,7 @@ Then your action could look like this:
     media_content_type: audio/mp3
     media_content_id: "{{ hakidgenai_response['content']['url'] }}"
 ```
+
+You may trigger it using the favourite plush of your kids, like this one:
+
+![Bing rabbit](https://github.com/irsl/hakidgenai/blob/main/bing.jpg?raw=true)
