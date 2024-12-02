@@ -1,0 +1,56 @@
+{
+	"ttsTemplates": {
+		"default": {
+			"voice":{
+			  "languageCode":"en-US",
+			  "ssmlGender":"FEMALE"
+			},
+			"audioConfig":{
+			  "audioEncoding":"MP3"
+			}
+		}
+	},
+	"genAiTemplates": {
+		"default": {
+			"systemInstruction": {"parts":[
+				{"text":"You're a robot."},
+			    {"text":"Your audience is small kids."}
+			]}
+		}
+	},
+	"static": [
+		{
+			"__comment": "static entries will be sent to the TTS engine directly to generate audio. You can assign the synthesize template via the ttsTemplate key. It is default by default.",
+			"id": "static1",
+			"text": "Hi there, how is it going?"
+		}
+	],
+	"genai": [
+		{
+			"__comment": "You can use ttsTemplate and genAiTemplate to fine tune the behavior.",
+			"id": "genai1",
+			"text": "Tell something inspiring to a 2 years old boy."
+		},
+		{
+			"id": "genai2",
+			"text": "Tell a joke."
+		},
+		{
+			"id": "genai3",
+			"text": "Tell a fun fact about the world."
+		},
+		{
+			"id": "genai4",
+			"text": "Tell a fun fact about the dinosaurs."
+		},
+		{
+			"id": "genai5",
+			"text": "Tell a fun fact about the universe or the planets."
+		},
+		{
+			"id": "genai6",
+			"text": "Give a simple math exercise for an 8 years old. Do not reveal the solution!"
+		}
+
+	]
+}
