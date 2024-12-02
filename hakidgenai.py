@@ -158,9 +158,14 @@ def serve_http(shared_data):
             self.send_header("Content-Type", content_type)
             self.send_header("Content-Length", str(size))
             self.end_headers()
+            if self.command == "HEAD":
+                return
             with open(p, "rb") as fp:
                 data = fp.read()
             self.wfile.write(data)
+
+        def do_HEAD(self):
+            return self.do_GET()
 
         def do_GET(self):
             if self.path == "/pick":
